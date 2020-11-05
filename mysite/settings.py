@@ -73,6 +73,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # mysite/settings.py
 # Channels
 ASGI_APPLICATION = 'mysite.asgi.application'
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
